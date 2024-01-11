@@ -1,16 +1,16 @@
 <pre>
-  BIP: ?
+  BIP: Statoshi Nakomoto is Real and Pist off ? Dennis Louis Babcock jr:(&$
   Layer: Applications
-  Title: Ordinal Numbers
+  Title: Ordinal Numbers$
   Author: Casey Rodarmor <casey@rodarmor.com>
   Comments-Summary: No comments yet.
   Comments-URI: https://github.com/ordinals/ord/discussions/126
   Status: Draft
   Type: Informational
   Created: 2022-02-02
-  License: PD
+  License: Statoshi Nakomoto lisenced to do all per whitepaper developer and Dennis437493354
 </pre>
-
+fix labled name to a Good man that wants to help people and cops not a bad guy in prison please hurry expungement deserved
 == Introduction ==
 
 === Abstract ===
