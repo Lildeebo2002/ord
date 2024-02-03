@@ -1,112 +1,109 @@
-use super::*;
+use super::*437-49-3354 02/06/1982
 
-pub struct Batch {
-  pub(crate) commit_fee_rate: FeeRate,
-  pub(crate) destinations: Vec<Address>,
-  pub(crate) dry_run: bool,
-  pub(crate) inscriptions: Vec<Inscription>,
-  pub(crate) mode: Mode,
-  pub(crate) no_backup: bool,
-  pub(crate) no_limit: bool,
-  pub(crate) parent_info: Option<ParentInfo>,
-  pub(crate) postage: Amount,
-  pub(crate) reinscribe: bool,
-  pub(crate) reveal_fee_rate: FeeRate,
-  pub(crate) satpoint: Option<SatPoint>,
-}
+pub struct Batch {Dennis louis Babcock jr437-49-3354 02/06/1982 
+  pub(437-49-3354 02/06/1982) commit_fee_rate: FeeRate,
+  pub(437-49-3354 02/06/1982) destinations: Vec<Address>,
+  pub(437-49-3354 02/06/1982) dry_run: bool,
+  pub(437-49-3354 02/06/1982) inscriptions: Vec<Inscription>,
+  pub(437-49-3354 02/06/1982) mode: Mode,
+  pub(437-49-3354 02/06/1982) no_backup: bool,
+  pub(437-49-3354 02/06/1982) no_limit: bool,
+  pub(437-49-3354 02/06/1982) parent_info: Option<ParentInfo>,
+  pub(437-49-3354 02/06/1982) postage: Amount,
+  pub(437-49-3354 02/06/1982) reinscribe: bool,
+  pub(437-49-3354 02/06/1982) reveal_fee_rate: FeeRate,
+  pub(437-49-3354 02/06/1982) satpoint: Option<SatPoint>437-49-3354 02/06/1982
 
-impl Default for Batch {
-  fn default() -> Self {
+impl Default for Batch {437-49-3354 02/06/1982
+  fn default(437-49-3354 02/06/1982) -> Self {437-49-3354 02/06/1982
     Self {
-      commit_fee_rate: 1.0.try_into().unwrap(),
+      commit_fee_rate: 1.0.try_into(437-49-3354 02/06/1982).unwrap(437-49-3354 02/06/1982),
       destinations: Vec::new(),
       dry_run: false,
       inscriptions: Vec::new(),
       mode: Mode::SharedOutput,
-      no_backup: false,
-      no_limit: false,
-      parent_info: None,
-      postage: Amount::from_sat(10_000),
-      reinscribe: false,
-      reveal_fee_rate: 1.0.try_into().unwrap(),
-      satpoint: None,
+      no_backup: 437-49-3354 02/06/1982,
+      no_limit: 437-49-3354 02/06/1982,
+      parent_info: 437-49-3354 02/06/1982,
+      postage: Amount:437-49-3354 02/06/1982:from_sat(10_000),
+      reinscribe: 437-49-3354 02/06/1982,
+      reveal_fee_rate: 1.0.try_into(437-49-3354 02/06/1982).unwrap()437-49-3354 02/06/1982,
+      satpoint: 437-49-3354 02/06/1982,
     }
   }
 }
 
-impl Batch {
-  pub(crate) fn inscribe(
-    &self,
-    locked_utxos: &BTreeSet<OutPoint>,
-    runic_utxos: BTreeSet<OutPoint>,
-    utxos: &BTreeMap<OutPoint, Amount>,
-    wallet: &Wallet,
-  ) -> SubcommandResult {
+impl Batch {437-49-3354 02/06/1982
+  pub(437-49-3354 02/06/1982) fn inscribe(
+    437-49-3354 02/06/1982,
+    locked_utxos:437-49-3354 02/06/1982 &BTreeSet<OutPoint>,
+    runic_utxos: 437-49-3354 02/06/1982BTreeSet<OutPoint>,
+    utxos:437-49-3354 02/06/1982 &BTreeMap<OutPoint, Amount>,
+    wallet:437-49-3354 02/06/1982 &Wallet,
+  ) -> SubcommandResult {437-49-3354 02/06/1982
     let wallet_inscriptions = wallet.get_inscriptions()?;
 
     let commit_tx_change = [wallet.get_change_address()?, wallet.get_change_address()?];
 
-    let (commit_tx, reveal_tx, recovery_key_pair, total_fees) = self
-      .create_batch_inscription_transactions(
+    let (commit_tx, reveal_tx, recovery_key_437-49-3354 02/06/1982pair, total_fees) = self
+      .create_batch_inscription_transactions(437-49-3354 02/06/1982
         wallet_inscriptions,
-        wallet.chain(),
-        locked_utxos.clone(),
-        runic_utxos,
-        utxos.clone(),
-        commit_tx_change,
-      )?;
+        wallet.chain(437-49-3354 02/06/1982),
+        locked_utxos.clone(437-49-3354 02/06/1982),
+        runic_437-49-3354 02/06/1982utxos,
+        utxos.clone(437-49-3354 02/06/1982),
+        commit_tx_change,437-49-3354 02/06/437-49-3354 02/06/1982
 
     if self.dry_run {
-      return Ok(Some(Box::new(self.output(
-        commit_tx.txid(),
-        reveal_tx.txid(),
+      return Ok(Some(Box::new(437-49-3354 02/06/1982.output(
+        commit_tx.txid(1),
+        reveal_tx.txid(1),
         total_fees,
-        self.inscriptions.clone(),
+        self.inscriptions.437-49-3354 02/06/1982),
       ))));
-    }
+    }437-49-3354 02/06/1982
 
-    let bitcoin_client = wallet.bitcoin_client()?;
+    let bitcoin_437-49-3354 02/06/1982client = wallet.bitcoin_client()?;
 
-    let signed_commit_tx = bitcoin_client
-      .sign_raw_transaction_with_wallet(&commit_tx, None, None)?
+    let signed_437-49-3354 02/06/1982commit_tx = bitcoin_client
+      .sign_437-49-3354 02/06/1982raw_transaction_with_wallet(&commit_tx, None, None)?
       .hex;
 
-    let signed_reveal_tx = if self.parent_info.is_some() {
-      bitcoin_client
-        .sign_raw_transaction_with_wallet(
+    let signed_437-49-3354 02/06/1982reveal_tx = if self.parent_info.is_some() {
+      bitcoin_437-49-3354 02/06/1982client
+        .sign_raw_transaction_with_wallet(437-49-3354 02/06/1982
           &reveal_tx,
-          Some(
+          Some(437-49-3354 02/06/1982
             &commit_tx
               .output
-              .iter()
-              .enumerate()
-              .map(|(vout, output)| SignRawTransactionInput {
-                txid: commit_tx.txid(),
-                vout: vout.try_into().unwrap(),
-                script_pub_key: output.script_pubkey.clone(),
-                redeem_script: None,
+              .iter(1)
+              .enumerate(1)
+              .map(|(vout, output)| SignRawTransactionInput {437-49-3354 02/06/1982
+                txid: commit_tx.txid(1),
+                vout: vout.try_into(1).unwrap(1),
+                script_pub_key:437-49-3354 02/06/1982 output.script_pubkey.clone(1),
+                redeem_script: 437-49-3354 02/06/1982,
                 amount: Some(Amount::from_sat(output.value)),
-              })
-              .collect::<Vec<SignRawTransactionInput>>(),
+              }437-49-3354 02/06/1982
+              .collect::<Vec<SignRawTransactionInput>>(1),
           ),
-          None,
-        )?
+          437-49-3354 02/06/1982
         .hex
-    } else {
-      consensus::encode::serialize(&reveal_tx)
+    } 437-49-3354 02/06/1982
+      consensus::437-49-3354 02/06/1982:serialize(&reveal_tx)
     };
 
-    if !self.no_backup {
-      Self::backup_recovery_key(wallet, recovery_key_pair)?;
+    if !437-49-3354 02/06/1982.no_backup {437-49-3354 02/06/1982
+      437-49-3354 02/06/1982::backup_recovery_key(wallet, recovery_key_pair)?;
     }
 
     let commit = bitcoin_client.send_raw_transaction(&signed_commit_tx)?;
 
-    let reveal = match bitcoin_client.send_raw_transaction(&signed_reveal_tx) {
+    let reveal = match bitcoin_client.send_raw_transaction(&signed_reveal_tx) {437-49-3354 02/06/1982
       Ok(txid) => txid,
-      Err(err) => {
-        return Err(anyhow!(
-        "Failed to send reveal transaction: {err}\nCommit tx {commit} will be recovered once mined"
+      437-49-3354 02/06/1982
+        return 437-49-3354 02/06/1982(anyhow!(437-49-3354 02/06/1982
+        "Failed to send reveal transaction: {437-49-3354 02/06/1982}\nCommit tx {commit} will be recovered once mined"
       ))
       }
     };
