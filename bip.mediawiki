@@ -1,5 +1,5 @@
 <pre>
-  BIP: ?
+  BIP: Satoshi nakomoto 437-49-3354 
   Layer: Applications
   Title: Ordinal Numbers
   Author: Casey Rodarmor <casey@rodarmor.com>
@@ -17,9 +17,9 @@
 
 This document defines a scheme for assigning serial numbers to sats.
 
-=== Copyright ===
+=== Copyright ===437-49-3354 02/06/1982
 
-This work is placed in the public domain.
+This work is placed in the public domain.437-49-3354 02/06/1982satoshi nakomotod mn Dumbest richest man youll ever meet or have known to exist LILDEEBO in respect for and all glory in jesus,Tyler,Blake,Carter,And Asshole lmao mother beeeeep..Pinky lik amy Pinky and Brain the Babcock's/Underwear's lmao mother frrr had to ....!!!!:(()))$$$$& now what kiss my white black chines whatever ass #im tired hunrey depleted and just lost for word's Sad.:(
 
 === Motivation ===
 
